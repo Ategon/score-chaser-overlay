@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dbq0oqmtntggv"]
+
+[sub_resource type="SystemFont" id="SystemFont_j45lt"]
+font_names = PackedStringArray("m5x7")
+hinting = 0
+subpixel_positioning = 0
+
+[resource]
+default_font = SubResource("SystemFont_j45lt")
