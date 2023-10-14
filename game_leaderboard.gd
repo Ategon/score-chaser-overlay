@@ -92,7 +92,7 @@ func _on_timer_timeout():
 	
 	if (data.size() >= 1):
 		FirstName.text = users[data[0][0]][1]
-		FirstDescription.text = str(data[0][1])
+		FirstDescription.text = str(abs(data[0][1]))
 		FirstImage.texture = load(users[data[0][0]][2])
 	else:
 		FirstName.text = ""
@@ -101,7 +101,7 @@ func _on_timer_timeout():
 	
 	if (data.size() >= 2):
 		SecondName.text = users[data[1][0]][1]
-		SecondDescription.text = str(data[1][1])
+		SecondDescription.text = str(abs(data[1][1]))
 		SecondImage.texture = load(users[data[1][0]][2])
 	else:
 		SecondName.text = ""
@@ -110,7 +110,7 @@ func _on_timer_timeout():
 	
 	if (data.size() >= 3):
 		ThirdName.text = users[data[2][0]][1]
-		ThirdDescription.text = str(data[2][1])
+		ThirdDescription.text = str(abs(data[2][1]))
 		ThirdImage.texture = load(users[data[2][0]][2])
 	else:
 		ThirdName.text = ""
@@ -119,7 +119,7 @@ func _on_timer_timeout():
 	
 	if (data.size() >= 4):
 		FourthName.text = users[data[3][0]][1]
-		FourthDescription.text = str(data[3][1])
+		FourthDescription.text = str(abs(data[3][1]))
 		FourthImage.texture = load(users[data[3][0]][2])
 	else:
 		FourthName.text = ""
@@ -128,7 +128,7 @@ func _on_timer_timeout():
 	
 	if (data.size() >= 5):
 		FifthName.text = users[data[3][0]][1]
-		FifthDescription.text = str(data[3][1])
+		FifthDescription.text = str(abs(data[3][1]))
 		FifthImage.texture = load(users[data[3][0]][2])
 	else:
 		FifthName.text = ""
