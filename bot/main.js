@@ -17,7 +17,7 @@ client.once(Events.ClientReady, (c) => {
 });
 
 const nothing = () => {};
-const queue = [];
+let queue = [];
 
 const updateScore = (who, score, cb = nothing) => {
   queue.push([who, score, cb]);
@@ -74,11 +74,11 @@ const updateBatch = throttle(1000, () => {
   });
 });
 client.on(Events.MessageCreate, (message) => {
-  if (message.channelId == "964243131656716288") {
+  if (message.channelId == "1066389810371117146") {
     if (isNaN(message.content)) {
       message.react("❌");
     } else {
-      updateScore(message.author.id, message.content, message.react);
+      updateScore(message.author.id, message.content, (s) => message.react(s));
     }
   }
 });
