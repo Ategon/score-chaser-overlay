@@ -43,7 +43,7 @@ offset_top = -21.0
 offset_right = 190.0
 offset_bottom = 3.0
 grow_vertical = 0
-theme_override_colors/default_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 text = "10000
 "
 

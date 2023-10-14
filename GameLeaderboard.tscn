@@ -41,13 +41,18 @@ layout_mode = 2
 [node name="LeaderboardEntry5" parent="VBoxContainer" instance=ExtResource("2_kylnn")]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="VBoxContainer"]
-custom_minimum_size = Vector2(141.89, 40)
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.403922)
+custom_minimum_size = Vector2(137.42, 40)
 layout_mode = 2
+offset_left = 966.87
+offset_top = 233.0
+offset_right = 1106.01
+offset_bottom = 273.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -61,3 +66,9 @@ grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[center]Current Top 5"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
