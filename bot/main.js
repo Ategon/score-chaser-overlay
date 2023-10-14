@@ -63,6 +63,9 @@ const updateBatch = throttle(1000, () => {
     }
   });
 
+  // clear the queue
+  queue = [];
+
   writeFile("../data/data.txt", file.join("\n"), (err) => {
     if (err) {
       console.error(err);
